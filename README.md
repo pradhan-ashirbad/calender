@@ -55,9 +55,9 @@ licence-to-operate audience; every page funnels to Contact/Careers CTAs.
 
 | Token | Value | Use |
 |-------|-------|-----|
-| Ink `#10161a → #0b0f11` | charcoal scale | headers, dark sections, footer |
-| Gold `#c9a227` (+`#d9b544`, `#ecd07c`, `#a8841c`) | brand accent | CTAs, icons, highlights — literal nod to the product |
-| Sand `#faf8f2`, `#f4efe3` | warm neutrals | page backgrounds (premium, not clinical white) |
+| Maroon `#7a1115` (+ deep shades `#310a0c → #1f0506`) | brand primary (from logo) | headings, eyebrows, dark sections, header, footer |
+| Gold `#c9971c` (+`#dcb054`, `#eed9a3`, `#a3790f`) | brand accent (from logo) | CTAs, icons, highlights, wordmark |
+| Sand `#faf7f0`, `#f4ede0` | warm neutrals | page backgrounds (premium, not clinical white) |
 | Display type | **Fraunces** (serif) | headlines — authority + heritage |
 | Body type | **Inter** (sans) | body, UI — clarity |
 | Type scale | fluid `clamp()` from 0.81rem → 4.5rem | responsive without breakpoint jumps |
@@ -70,8 +70,10 @@ stats strip with animated counters, icon cards, split feature panels, flagship s
 timeline, accordion, data table, people cards, chip lists, CTA bands, validated forms with
 success states, 4-column footer, back-to-top.
 
-Brand mark: a hexagonal crest (mineral crystal) containing a ridgeline and gold sun-dot —
-provided as inline SVG and favicon. Replace with the official logo if preferred.
+Brand mark: the official Geomysore logo (gold crescent around a gold disc bearing a maroon
+map of peninsular India) recreated as a crisp, scalable inline SVG and matching favicon. To use
+the original raster logo instead, replace the `svg.brand__mark` blocks with
+`<img class="brand__mark" src="images/logo.png" alt="Geomysore logo">`.
 
 ## 4. Accessibility
 
@@ -85,9 +87,12 @@ provided as inline SVG and favicon. Replace with the official logo if preferred.
 
 All factual content (history, ownership, tenements, Jonnagiri figures, statutory clearances,
 CSR programmes, leadership names, contact details) was reused from the existing site's indexed
-content and public records. Because the origin blocks automated download, photography could not
-be copied; the design uses branded SVG/gradient art in **clearly-marked visual panels**
-(`.visual-panel`) that are drop-in slots for the client's existing photos:
+content and public records. Because the origin blocks automated download, the company's own
+photography could not be copied. The site therefore ships with **licensed Unsplash photography
+hotlinked into every visual panel and the homepage hero**, each with an `onerror` fallback that
+reveals branded SVG art if an image ever fails to load. These are placeholders — swap each
+`img.visual-panel__img` / hero `img` `src` for the company's own photos (saved under `images/`)
+for the final launch:
 
 | Slot | Page | Suggested existing image |
 |------|------|--------------------------|
