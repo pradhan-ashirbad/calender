@@ -231,6 +231,12 @@ strong { color: var(--ink-800); }
 .brand__mark {
   width: 44px; height: 44px; flex: none;
 }
+.brand__logo-img {
+  height: 44px; width: auto; flex: none; display: block;
+}
+.footer-brand .brand__logo-img {
+  height: 40px;
+}
 .brand__name {
   font-family: var(--font-display);
   font-size: 1.2rem;
