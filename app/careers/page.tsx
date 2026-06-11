@@ -97,7 +97,7 @@ export default function CareersPage() {
                         <span
                           className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
                             job.department === 'Mechanical'
-                              ? 'bg-sidebar/10 text-sidebar'
+                              ? 'bg-gold/10 text-gold'
                               : 'bg-accent/10 text-accent'
                           }`}
                         >

@@ -12,7 +12,7 @@ function navLinkClass(active: boolean) {
     'after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:bg-accent-light after:transition-transform after:duration-150',
     active
       ? 'text-white after:scale-x-100'
-      : 'text-slate-300 after:scale-x-0 hover:text-white hover:after:scale-x-100',
+      : 'text-stone-300 after:scale-x-0 hover:text-white hover:after:scale-x-100',
   ].join(' ');
 }
 
@@ -133,7 +133,7 @@ export default function Navbar() {
                   {openSection === item.label && (
                     <ul className="mb-2 ml-3 space-y-1 border-l border-white/10 pl-3">
                       <li>
-                        <Link href={item.href} className="block rounded-md px-3 py-2 text-sm text-slate-300 hover:text-white">
+                        <Link href={item.href} className="block rounded-md px-3 py-2 text-sm text-stone-300 hover:text-white">
                           Overview
                         </Link>
                       </li>
@@ -142,7 +142,7 @@ export default function Navbar() {
                           <Link
                             href={child.href}
                             className={`block rounded-md px-3 py-2 text-sm hover:text-white ${
-                              pathname === child.href ? 'text-accent-light' : 'text-slate-300'
+                              pathname === child.href ? 'text-accent-light' : 'text-stone-300'
                             }`}
                           >
                             {child.label}
@@ -165,10 +165,10 @@ export default function Navbar() {
             )}
           </ul>
           <div className="mt-6 space-y-1 border-t border-white/10 pt-6">
-            <Link href="/careers" className="block rounded-md px-3 py-2 text-sm text-slate-300 hover:text-white">
+            <Link href="/careers" className="block rounded-md px-3 py-2 text-sm text-stone-300 hover:text-white">
               Careers
             </Link>
-            <Link href="/gallery" className="block rounded-md px-3 py-2 text-sm text-slate-300 hover:text-white">
+            <Link href="/gallery" className="block rounded-md px-3 py-2 text-sm text-stone-300 hover:text-white">
               Gallery
             </Link>
           </div>

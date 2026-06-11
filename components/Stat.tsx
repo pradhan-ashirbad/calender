@@ -17,7 +17,7 @@ export function StatStrip({ stats, label }: { stats: StatItem[]; label: string }
               <StatCounter value={stat.value} />
               {stat.unit && <span className="ml-1.5 text-base text-accent-light sm:text-lg">{stat.unit}</span>}
             </p>
-            <p className="mt-2 text-sm text-slate-400">{stat.label}</p>
+            <p className="mt-2 text-sm text-stone-400">{stat.label}</p>
           </Reveal>
         ))}
       </div>

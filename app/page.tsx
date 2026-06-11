@@ -86,19 +86,19 @@ export default function HomePage() {
           className="object-cover"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/40" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-accent/55" aria-hidden="true" />
         <div className="container-x relative py-28 lg:py-40">
           <h1 className="max-w-3xl font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
             India&rsquo;s Premier Gold Exploration &amp; Development Company
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-200">
             Operating across India since 1994 — 35,000+ sq.km explored, multiple precious metal discoveries, and
             India&rsquo;s first large greenfield integrated gold mining and processing facility under development.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
               href="/project"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-medium text-white transition-colors duration-150 hover:bg-accent-dark"
+              className="inline-flex items-center gap-2 rounded-lg bg-gold-bright px-6 py-3 font-medium text-ink transition-colors duration-150 hover:bg-gold-soft"
             >
               Explore the Project
               <IconArrowRight className="h-4 w-4" />

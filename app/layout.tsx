@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono, Playfair_Display } from 'next/font/google';
+import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { IMG, SITE } from '@/lib/site';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap' });
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${jetbrains.variable}`}>
       <body>
         <a
           href="#main"

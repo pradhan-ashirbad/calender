@@ -6,20 +6,23 @@ A complete redesign of [geomysore.com](https://www.geomysore.com) as a modern Ne
 
 - **Next.js 14** (App Router, TypeScript, static prerendering)
 - **Tailwind CSS 3** — all styling via utility classes, no inline styles
-- **Google Fonts** via `next/font`: Playfair Display (headings), Inter (body), JetBrains Mono (stats/labels)
+- **Google Fonts** via `next/font`: Fraunces (headings), Inter (body), JetBrains Mono (stats/labels)
 - No animation libraries — scroll reveals and stat counters use `IntersectionObserver` and respect `prefers-reduced-motion`
 
 ## Design system
 
+Brand maroon + gold palette, matching the company logo:
+
 | Token | Value | Use |
 | --- | --- | --- |
-| `sidebar` | `#334155` | Navbar, footer, dark sections |
-| `canvas` | `#FAFAF8` | Page background |
-| `accent` | `#0D9488` | CTAs, links, active states |
-| `ink` | `#1E293B` | Body text |
-| `muted` | `#64748B` | Secondary text |
-| `line` | `#E2E8F0` | Borders, dividers (also the default border colour) |
-| `gold` | `#B45309` | Sparingly, where gold (the product) is referenced |
+| `sidebar` | `#310a0c` | Navbar, footer, dark sections (deep maroon-ink) |
+| `canvas` | `#faf7f0` | Page background (warm sand) |
+| `accent` | `#7a1115` | Maroon — CTAs, links, active states |
+| `accent-light` | `#dcb054` | Gold accents on dark backgrounds |
+| `ink` | `#1f0506` | Body text, darkest sections |
+| `muted` | `#6f5a52` | Secondary text (warm taupe) |
+| `line` | `#eadfc7` | Borders, dividers (also the default border colour) |
+| `gold` | `#a3790f` / `#c9971c` | Gold stats, highlights and hero CTA |
 
 ## Development
 

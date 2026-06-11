@@ -88,9 +88,9 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
           <div className="relative h-[72vh] w-full max-w-5xl">
             <Image src={items[active].src} alt={items[active].alt} fill sizes="100vw" className="object-contain" />
           </div>
-          <p className="mt-4 max-w-2xl text-center text-sm text-slate-300">
+          <p className="mt-4 max-w-2xl text-center text-sm text-stone-300">
             {items[active].alt}
-            <span className="ml-3 font-mono text-xs text-slate-500">
+            <span className="ml-3 font-mono text-xs text-stone-500">
               {active + 1} / {items.length}
             </span>
           </p>
