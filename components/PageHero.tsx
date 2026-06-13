@@ -13,7 +13,7 @@ export default function PageHero({ eyebrow, title, lead, image }: Props) {
     <section className="relative isolate overflow-hidden bg-gradient-to-br from-ink via-sidebar to-accent-dark">
       {image && (
         <>
-          <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" aria-hidden="true" />
+          <Image src={image} alt="" fill priority sizes="100vw" className="animate-kenburns object-cover" aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/85 to-accent-dark/70" aria-hidden="true" />
         </>
       )}

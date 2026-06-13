@@ -88,21 +88,29 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-ink">
-        <Image src={IMG.heroTeam} alt="" fill priority sizes="100vw" className="object-cover" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/85 to-accent/45" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/20" aria-hidden="true" />
+      <section className="relative isolate flex min-h-[92vh] flex-col justify-end overflow-hidden bg-ink">
+        <Image
+          src={IMG.heroTeam}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="animate-kenburns object-cover"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-accent/40" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/25" aria-hidden="true" />
         <Contours className="absolute inset-0 h-full w-full text-gold/10" />
-        <div className="container-x relative pb-28 pt-24 lg:pb-40 lg:pt-32">
+        <div className="container-x relative pb-24 pt-36">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold-soft/30 bg-white/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-gold-soft backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-gold-soft" aria-hidden="true" />
             Gold exploration since 1994
           </span>
-          <h1 className="mt-6 max-w-4xl font-display text-[2.7rem] leading-[1.04] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-7 max-w-5xl font-display text-[2.9rem] leading-[1.01] text-white sm:text-6xl lg:text-[5.5rem]">
             India&rsquo;s premier <span className="text-gradient-gold">gold exploration</span> &amp; development
             company
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-stone-200">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-stone-200 sm:text-xl">
             35,000+ sq.km explored, multiple precious-metal discoveries, and India&rsquo;s first large greenfield
             integrated gold mining and processing facility under development.
           </p>
@@ -114,6 +122,17 @@ export default function HomePage() {
             <Link href="/about" className="btn-ghost">
               About Geomysore
             </Link>
+          </div>
+        </div>
+        <div className="relative border-t border-white/10">
+          <div className="container-x flex items-center justify-between py-5 font-mono text-xs uppercase tracking-[0.2em] text-stone-400">
+            <span>Geomysore Services (India) Pvt. Ltd.</span>
+            <span className="hidden items-center gap-2 sm:flex">
+              Scroll to explore
+              <span className="animate-float" aria-hidden="true">
+                ↓
+              </span>
+            </span>
           </div>
         </div>
       </section>
@@ -141,6 +160,21 @@ export default function HomePage() {
       <div className="mt-16 sm:mt-20">
         <Marquee items={PARTNERS} label="Shareholders, partners & reporting standards" />
       </div>
+
+      {/* Vision statement */}
+      <section className="relative overflow-hidden py-24 sm:py-32">
+        <Contours className="absolute inset-0 h-full w-full text-gold/[0.06]" />
+        <div className="container-x relative">
+          <Reveal>
+            <p className="eyebrow text-gold">Our purpose</p>
+            <p className="mt-7 max-w-5xl font-display text-3xl leading-[1.28] text-ink sm:text-4xl lg:text-[2.9rem] lg:leading-[1.25]">
+              We find and develop India&rsquo;s gold to the highest international standards —{' '}
+              <span className="text-gradient-gold">JORC and NI 43-101 compliant</span> — and in lasting partnership
+              with the communities who host our work.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
       {/* About intro */}
       <section className="py-20 sm:py-28">
@@ -213,7 +247,14 @@ export default function HomePage() {
 
       {/* Flagship project — full-bleed band */}
       <section className="relative isolate overflow-hidden bg-ink" aria-labelledby="flagship">
-        <Image src={STOCK.minePit} alt="" fill sizes="100vw" className="object-cover opacity-40" aria-hidden="true" />
+        <Image
+          src={STOCK.minePit}
+          alt=""
+          fill
+          sizes="100vw"
+          className="animate-kenburns object-cover opacity-40"
+          aria-hidden="true"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/50" aria-hidden="true" />
         <Contours className="absolute inset-0 h-full w-full text-gold/10" />
         <div className="container-x relative py-24 lg:py-32">

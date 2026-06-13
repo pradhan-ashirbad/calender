@@ -42,10 +42,15 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-8px)' },
         },
+        kenburns: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.12)' },
+        },
       },
       animation: {
         marquee: 'marquee 32s linear infinite',
         float: 'float 6s ease-in-out infinite',
+        kenburns: 'kenburns 24s ease-in-out infinite alternate',
       },
     },
   },

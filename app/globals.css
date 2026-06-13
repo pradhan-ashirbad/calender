@@ -131,7 +131,8 @@
   }
 
   .animate-marquee,
-  .animate-float {
+  .animate-float,
+  .animate-kenburns {
     animation: none !important;
   }
 }

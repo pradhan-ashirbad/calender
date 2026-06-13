@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import ScrollProgress from '@/components/ScrollProgress';
 import { IMG, SITE } from '@/lib/site';
 import './globals.css';
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <ScrollProgress />
         <Navbar />
         <main id="main">{children}</main>
         <Footer />
