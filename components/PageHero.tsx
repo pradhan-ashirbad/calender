@@ -6,14 +6,28 @@ type Props = {
 
 export default function PageHero({ eyebrow, title, lead }: Props) {
   return (
-    <section className="bg-gradient-to-r from-sidebar via-sidebar to-accent">
-      <div className="container-x py-16 sm:py-20">
+    <section className="relative isolate overflow-hidden bg-gradient-to-br from-ink via-sidebar to-accent-dark">
+      <div className="absolute inset-0 bg-grid opacity-50" aria-hidden="true" />
+      <div
+        className="absolute -right-24 -top-28 h-80 w-80 rounded-full bg-gold/20 blur-3xl"
+        aria-hidden="true"
+      />
+      <div className="container-x relative py-20 sm:py-24">
         {eyebrow && (
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-light sm:text-sm">{eyebrow}</p>
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold-soft/30 bg-white/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-gold-soft backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold-soft" aria-hidden="true" />
+            {eyebrow}
+          </span>
         )}
-        <h1 className="mt-3 font-display text-4xl text-white sm:text-5xl">{title}</h1>
-        {lead && <p className="mt-5 max-w-3xl text-lg leading-relaxed text-stone-300">{lead}</p>}
+        <h1 className="mt-6 max-w-4xl font-display text-4xl leading-[1.08] text-white sm:text-5xl lg:text-6xl">
+          {title}
+        </h1>
+        {lead && <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-200/90">{lead}</p>}
       </div>
+      <div
+        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent"
+        aria-hidden="true"
+      />
     </section>
   );
 }

@@ -21,11 +21,19 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [openSection, setOpenSection] = useState<string | null>(null);
   const [logoFailed, setLogoFailed] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setOpen(false);
     setOpenSection(null);
   }, [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -37,8 +45,18 @@ export default function Navbar() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className="sticky top-0 z-50 bg-sidebar shadow-md">
-      <div className="container-x flex h-16 items-center justify-between lg:h-20">
+    <header
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? 'border-white/10 bg-sidebar/80 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-sidebar/70'
+          : 'border-transparent bg-sidebar'
+      }`}
+    >
+      <div
+        className={`container-x flex items-center justify-between transition-all duration-300 ${
+          scrolled ? 'h-16' : 'h-16 lg:h-20'
+        }`}
+      >
         <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="Geomysore — Home">
           {logoFailed ? (
             <span className="font-display text-2xl font-semibold tracking-wide text-white">GEOMYSORE</span>
@@ -61,8 +79,9 @@ export default function Navbar() {
                     {item.label}
                     <IconChevronDown className="h-3.5 w-3.5 transition-transform duration-150 group-hover:rotate-180" />
                   </Link>
-                  <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition duration-150 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-                    <ul className="w-64 rounded-lg border bg-white py-2 shadow-xl">
+                  <div className="invisible absolute left-0 top-full translate-y-1 pt-3 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                    <ul className="w-64 overflow-hidden rounded-xl border border-line bg-white py-2 shadow-2xl ring-1 ring-black/5">
+                      <li className="mx-2 mb-1 h-0.5 rounded-full bg-gradient-to-r from-gold-bright to-gold" aria-hidden="true" />
                       {item.children.map((child) => (
                         <li key={child.href}>
                           <Link

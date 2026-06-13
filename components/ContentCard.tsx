@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { IconArrowRight } from '@/components/icons';
 
 type Props = {
   title: string;
@@ -10,27 +11,33 @@ type Props = {
 export default function ContentCard({ title, href, icon, children }: Props) {
   const body = (
     <>
+      {href && <span className="card-accent-bar group-hover:scale-x-100" aria-hidden="true" />}
       {icon && (
-        <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent/10 text-accent">
+        <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-gold/10 text-accent ring-1 ring-inset ring-accent/10">
           {icon}
         </span>
       )}
-      <h3 className={`font-display text-xl text-ink ${href ? 'transition-colors duration-150 group-hover:text-accent' : ''}`}>
+      <h3
+        className={`font-display text-xl text-ink ${href ? 'transition-colors duration-200 group-hover:text-accent' : ''}`}
+      >
         {title}
       </h3>
       <div className="mt-2 text-sm leading-relaxed text-muted">{children}</div>
+      {href && (
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent opacity-0 -translate-x-1 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+          Learn more
+          <IconArrowRight className="h-4 w-4" />
+        </span>
+      )}
     </>
   );
 
-  const cardClass =
-    'block h-full rounded-lg border bg-white p-6 shadow-sm transition duration-150 hover:scale-[1.02] hover:shadow-md';
-
   if (href) {
     return (
-      <Link href={href} className={`group ${cardClass}`}>
+      <Link href={href} className="card card-hover group">
         {body}
       </Link>
     );
   }
-  return <div className={cardClass}>{body}</div>;
+  return <div className="card">{body}</div>;
 }

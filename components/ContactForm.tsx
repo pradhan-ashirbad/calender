@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 const inputClass = (invalid: boolean) =>
-  `block w-full rounded-lg border bg-white px-4 py-3 text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent/30 ${
-    invalid ? 'border-red-500' : 'focus:border-accent'
+  `block w-full rounded-xl border bg-white px-4 py-3 text-ink shadow-sm transition-colors placeholder:text-muted focus:outline-none focus:ring-4 focus:ring-accent/15 ${
+    invalid ? 'border-red-500' : 'border-line focus:border-accent'
   }`;
 
 export default function ContactForm() {
@@ -96,10 +96,7 @@ export default function ContactForm() {
             </p>
           )}
         </div>
-        <button
-          type="submit"
-          className="rounded-lg bg-accent px-6 py-3 font-medium text-white transition-colors duration-150 hover:bg-accent-dark"
-        >
+        <button type="submit" className="btn-maroon">
           Send Message
         </button>
       </div>

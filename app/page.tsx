@@ -76,7 +76,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative isolate bg-sidebar">
+      <section className="relative isolate overflow-hidden bg-ink">
         <Image
           src={IMG.heroTeam}
           alt=""
@@ -86,31 +86,39 @@ export default function HomePage() {
           className="object-cover"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-accent/55" aria-hidden="true" />
-        <div className="container-x relative py-28 lg:py-40">
-          <h1 className="max-w-3xl font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
-            India&rsquo;s Premier Gold Exploration &amp; Development Company
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/85 to-accent/50" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/30"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-grid opacity-30" aria-hidden="true" />
+        <div className="container-x relative py-28 lg:py-44">
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold-soft/30 bg-white/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-gold-soft backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold-soft" aria-hidden="true" />
+            Gold exploration since 1994
+          </span>
+          <h1 className="mt-6 max-w-4xl font-display text-4xl leading-[1.06] text-white sm:text-5xl lg:text-6xl">
+            India&rsquo;s Premier <span className="text-gradient-gold">Gold Exploration</span> &amp; Development
+            Company
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-200">
             Operating across India since 1994 — 35,000+ sq.km explored, multiple precious metal discoveries, and
             India&rsquo;s first large greenfield integrated gold mining and processing facility under development.
           </p>
-          <div className="mt-9 flex flex-wrap gap-4">
-            <Link
-              href="/project"
-              className="inline-flex items-center gap-2 rounded-lg bg-gold-bright px-6 py-3 font-medium text-ink transition-colors duration-150 hover:bg-gold-soft"
-            >
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link href="/project" className="btn-gold">
               Explore the Project
               <IconArrowRight className="h-4 w-4" />
             </Link>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/50 px-6 py-3 font-medium text-white transition-colors duration-150 hover:bg-white/10"
-            >
+            <Link href="/about" className="btn-ghost">
               About Geomysore
             </Link>
           </div>
         </div>
+        <div
+          className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"
+          aria-hidden="true"
+        />
       </section>
 
       {/* Stats bar */}
@@ -201,19 +209,25 @@ export default function HomePage() {
       </section>
 
       {/* CSR teaser */}
-      <section className="bg-accent" aria-labelledby="csr-teaser">
-        <div className="container-x flex flex-col items-start gap-6 py-12 sm:flex-row sm:items-center sm:justify-between">
-          <h2 id="csr-teaser" className="max-w-2xl font-display text-2xl leading-snug text-white sm:text-3xl">
-            Mining that gives back — Education, Health, Water Supply, Plantation and Infrastructure for surrounding
-            communities.
-          </h2>
-          <Link
-            href="/csr"
-            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white px-6 py-3 font-medium text-accent transition-colors duration-150 hover:bg-canvas"
-          >
-            See our CSR work
-            <IconArrowRight className="h-4 w-4" />
-          </Link>
+      <section className="pb-20 pt-4" aria-labelledby="csr-teaser">
+        <div className="container-x">
+          <div className="relative isolate overflow-hidden rounded-3xl bg-gradient-to-br from-accent-dark via-accent to-sidebar px-8 py-12 sm:px-12 lg:py-16">
+            <div className="absolute inset-0 bg-grid opacity-20" aria-hidden="true" />
+            <div
+              className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-gold/25 blur-3xl"
+              aria-hidden="true"
+            />
+            <div className="relative flex flex-col items-start gap-7 lg:flex-row lg:items-center lg:justify-between">
+              <h2 id="csr-teaser" className="max-w-2xl font-display text-2xl leading-snug text-white sm:text-3xl">
+                Mining that gives back — Education, Health, Water Supply, Plantation and Infrastructure for
+                surrounding communities.
+              </h2>
+              <Link href="/csr" className="btn-gold shrink-0">
+                See our CSR work
+                <IconArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

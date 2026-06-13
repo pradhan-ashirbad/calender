@@ -3,8 +3,8 @@
 import { useRef, useState } from 'react';
 
 const inputClass = (invalid: boolean) =>
-  `block w-full rounded-lg border bg-white px-4 py-3 text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent/30 ${
-    invalid ? 'border-red-500' : 'focus:border-accent'
+  `block w-full rounded-xl border bg-white px-4 py-3 text-ink shadow-sm transition-colors placeholder:text-muted focus:outline-none focus:ring-4 focus:ring-accent/15 ${
+    invalid ? 'border-red-500' : 'border-line focus:border-accent'
   }`;
 
 type Field = {
@@ -83,8 +83,8 @@ export default function ResumeForm() {
             ref={fileRef}
             type="file"
             accept=".pdf,.doc,.docx"
-            className={`block w-full rounded-lg border bg-white px-4 py-2.5 text-sm text-muted file:mr-4 file:rounded-md file:border-0 file:bg-accent/10 file:px-4 file:py-2 file:text-sm file:font-medium file:text-accent ${
-              errors.resume ? 'border-red-500' : ''
+            className={`block w-full rounded-xl border bg-white px-4 py-2.5 text-sm text-muted shadow-sm file:mr-4 file:rounded-lg file:border-0 file:bg-accent/10 file:px-4 file:py-2 file:text-sm file:font-medium file:text-accent hover:file:bg-accent/15 ${
+              errors.resume ? 'border-red-500' : 'border-line'
             }`}
             aria-invalid={!!errors.resume}
             aria-describedby={errors.resume ? 'resume-file-error' : undefined}
@@ -95,10 +95,7 @@ export default function ResumeForm() {
             </p>
           )}
         </div>
-        <button
-          type="submit"
-          className="rounded-lg bg-accent px-6 py-3 font-medium text-white transition-colors duration-150 hover:bg-accent-dark"
-        >
+        <button type="submit" className="btn-maroon">
           Submit Application
         </button>
       </div>

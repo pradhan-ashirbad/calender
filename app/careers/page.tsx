@@ -77,7 +77,7 @@ export default function CareersPage() {
             lead="All open positions close on 30-07-2025."
           />
           <Reveal className="mt-10">
-            <div className="overflow-x-auto rounded-lg border bg-white shadow-sm">
+            <div className="overflow-x-auto rounded-2xl border border-line bg-white shadow-[0_1px_2px_rgba(31,5,6,0.04),0_10px_30px_-20px_rgba(31,5,6,0.18)]">
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
                   <tr className="border-b bg-canvas font-mono text-xs uppercase tracking-wider text-muted">
@@ -90,7 +90,7 @@ export default function CareersPage() {
                 </thead>
                 <tbody>
                   {jobs.map((job, index) => (
-                    <tr key={job.title} className="border-b last:border-0">
+                    <tr key={job.title} className="border-b transition-colors last:border-0 hover:bg-canvas/70">
                       <td className="px-5 py-3.5 font-mono text-xs text-muted">{index + 1}</td>
                       <td className="px-5 py-3.5 font-medium text-ink">{job.title}</td>
                       <td className="px-5 py-3.5">
