@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import ContentCard from '@/components/ContentCard';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
@@ -46,7 +47,7 @@ const pillars = [
 export default function NetZeroPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.aerial}
         eyebrow="Sustainability"
         title="Net Zero"
         lead="Minimising emissions is built into how Jonnagiri is designed and operated — from circular materials to energy-efficient processing."

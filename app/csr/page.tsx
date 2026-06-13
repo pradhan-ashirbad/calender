@@ -4,7 +4,7 @@ import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
 import { IconGraduationCap } from '@/components/icons';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'CSR',
@@ -97,7 +97,7 @@ const pillars: Pillar[] = [
 export default function CsrPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.field}
         eyebrow="Giving Back"
         title="Corporate Social Responsibility"
         lead="At Geomysore Services India Pvt Ltd, we believe in responsible and sustainable business practices that contribute to the well-being of communities and the environment. Our CSR initiatives focus on environmental conservation, community development, and ethical mining practices to create a positive and lasting impact."
@@ -109,7 +109,7 @@ export default function CsrPage() {
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
             {pillars.map((pillar) => (
               <Reveal key={pillar.title}>
-                <article className="h-full overflow-hidden rounded-lg border bg-white shadow-sm">
+                <article className="h-full overflow-hidden rounded-2xl border bg-white shadow-md">
                   {pillar.image ? (
                     <div className="relative aspect-video">
                       <Image

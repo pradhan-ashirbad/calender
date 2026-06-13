@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 import PageHero from '@/components/PageHero';
@@ -47,7 +48,7 @@ const programmes = [
 export default function CommunityIntegrationPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.landscape}
         eyebrow="Sustainability"
         title="Integration With Society"
         lead="A mine can only succeed with its neighbours. Geomysore has been part of daily life in Jonnagiri, Erragudi and Pagadirayi since operations began."

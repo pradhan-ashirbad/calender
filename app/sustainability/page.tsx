@@ -6,7 +6,7 @@ import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
 import { IconArrowRight, IconBulb, IconHeart, IconLeaf, IconMountain, IconRecycle, IconSun } from '@/components/icons';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Sustainability',
@@ -71,7 +71,7 @@ const subPages = [
 export default function SustainabilityPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.aerial}
         eyebrow="Responsible Mining"
         title="Sustainability"
         lead="At Geomysore, sustainability is at the core of our mining operations. We are committed to minimising environmental impact while enhancing resource efficiency and community value."
@@ -96,7 +96,7 @@ export default function SustainabilityPage() {
             </Link>
           </Reveal>
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg border shadow-sm">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border shadow-md">
               <Image
                 src={IMG.treeStep1}
                 alt="A mature tree being lifted by crane during the tree translocation program"

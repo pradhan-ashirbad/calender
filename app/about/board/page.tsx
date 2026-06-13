@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 
@@ -59,7 +60,7 @@ const board = [
 export default function BoardPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.landscape}
         eyebrow="Governance"
         title="Board of Directors"
         lead="A board that blends international mining investment experience with hands-on Indian operating expertise."
@@ -68,7 +69,7 @@ export default function BoardPage() {
         <div className="container-x grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {board.map((person) => (
             <Reveal key={person.name}>
-              <article className="h-full rounded-lg border bg-white p-6 shadow-sm">
+              <article className="h-full rounded-2xl border bg-white p-6 shadow-md">
                 <span
                   className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-sidebar font-display text-lg text-white"
                   aria-hidden="true"

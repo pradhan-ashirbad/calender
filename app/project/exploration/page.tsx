@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import ContentCard from '@/components/ContentCard';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
@@ -45,7 +46,7 @@ const centralBelts = ['Mahakoshal', 'Sakoli', 'Kotri', 'Pathalgaon', 'Betul'];
 export default function ExplorationPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.mountains}
         eyebrow="Jonnagiri Project"
         title="Exploration"
         lead="Three decades of systematic gold exploration in the subcontinent's most prospective greenstone and schist belts — guided by advanced geological, geochemical and geophysical science."
@@ -89,7 +90,7 @@ export default function ExplorationPage() {
           />
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             <Reveal>
-              <div className="h-full rounded-lg border bg-canvas p-6">
+              <div className="h-full rounded-2xl border bg-canvas p-6">
                 <h3 className="font-display text-xl text-ink">Southern India</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
                   The granite-greenstone heartland of Indian gold, including the legendary Kolar camp where granted
@@ -110,7 +111,7 @@ export default function ExplorationPage() {
               </div>
             </Reveal>
             <Reveal>
-              <div className="h-full rounded-lg border bg-canvas p-6">
+              <div className="h-full rounded-2xl border bg-canvas p-6">
                 <h3 className="font-display text-xl text-ink">Central India</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
                   Proterozoic mobile belts with proven gold and base-metal endowment, systematically tested through
@@ -138,19 +139,19 @@ export default function ExplorationPage() {
           />
           <Reveal className="mt-8">
             <ul className="space-y-4">
-              <li className="rounded-lg border bg-white p-5 shadow-sm">
+              <li className="rounded-2xl border bg-white p-5 shadow-md">
                 <p className="text-sm leading-relaxed text-muted">
                   <strong className="font-semibold text-ink">Reconnaissance Permits</strong> — 18,490 sq.km of ground
                   secured under 25 RP applications
                 </p>
               </li>
-              <li className="rounded-lg border bg-white p-5 shadow-sm">
+              <li className="rounded-2xl border bg-white p-5 shadow-md">
                 <p className="text-sm leading-relaxed text-muted">
                   <strong className="font-semibold text-ink">Prospecting Licences</strong> — 39 PL applications over
                   819.2 sq.km, with key grants around the Kolar Gold Field
                 </p>
               </li>
-              <li className="rounded-lg border bg-white p-5 shadow-sm">
+              <li className="rounded-2xl border bg-white p-5 shadow-md">
                 <p className="text-sm leading-relaxed text-muted">
                   <strong className="font-semibold text-ink">Mining Leases</strong> — 7 ML applications over 33.4
                   sq.km; the Jonnagiri ML granted and now in production

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
@@ -34,7 +35,7 @@ const phases = [
 export default function RecycleRebuildPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.landscape}
         eyebrow="Sustainability"
         title="Recycle & Rebuild"
         lead="The final steps of our four-step framework — closing the loop on materials and returning the land better than mining found it."
@@ -50,7 +51,7 @@ export default function RecycleRebuildPage() {
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {phases.map((phase) => (
               <Reveal key={phase.label}>
-                <article className="h-full rounded-lg border bg-white p-8 shadow-sm">
+                <article className="h-full rounded-2xl border bg-white p-8 shadow-md">
                   <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">{phase.label}</p>
                   <h2 className="mt-3 font-display text-2xl text-ink">{phase.title}</h2>
                   <p className="mt-3 leading-relaxed text-muted">{phase.text}</p>

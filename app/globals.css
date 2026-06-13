@@ -72,6 +72,25 @@
     content: '';
     @apply h-1.5 w-1.5 rounded-full bg-current;
   }
+
+  /* Inline text link with a sliding arrow */
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 font-semibold text-accent transition-colors duration-200 hover:text-accent-dark;
+  }
+
+  .link-arrow svg {
+    @apply transition-transform duration-200;
+  }
+
+  .link-arrow:hover svg {
+    @apply translate-x-1;
+  }
+
+  /* Horizontal partner / credential marquee */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  }
 }
 
 @layer utilities {
@@ -109,5 +128,10 @@
   .btn-maroon:hover,
   .card-hover:hover {
     transform: none;
+  }
+
+  .animate-marquee,
+  .animate-float {
+    animation: none !important;
   }
 }

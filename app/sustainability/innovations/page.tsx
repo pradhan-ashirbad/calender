@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import ContentCard from '@/components/ContentCard';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
@@ -46,7 +47,7 @@ const innovations = [
 export default function InnovationsPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.plant}
         eyebrow="Sustainability"
         title="Innovations"
         lead="Practical innovation — tested at pilot scale, proven in the field and applied across mining, processing and rehabilitation."

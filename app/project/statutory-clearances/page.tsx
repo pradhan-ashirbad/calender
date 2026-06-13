@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
@@ -45,7 +46,7 @@ const clearances = [
 export default function StatutoryClearancesPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.plant}
         eyebrow="Jonnagiri Project"
         title="Statutory Clearances"
         lead="Jonnagiri holds all major government approvals required for full-scale mining and processing."
@@ -61,8 +62,8 @@ export default function StatutoryClearancesPage() {
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {clearances.map((clearance) => (
               <Reveal key={clearance.title}>
-                <article className="flex h-full gap-5 rounded-lg border bg-white p-6 shadow-sm">
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <article className="flex h-full gap-5 rounded-2xl border bg-white p-6 shadow-md">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                     {clearance.icon}
                   </span>
                   <div>

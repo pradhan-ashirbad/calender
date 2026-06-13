@@ -27,6 +27,29 @@ export const IMG = {
   csrVillage: `${ASSETS}/csr/village6.webp`,
 };
 
+// Placeholder photography from Unsplash — swap these for real Geomysore
+// photography later. Centralised here so they are easy to find and replace.
+const u = (id: string, w = 1600) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+export const STOCK = {
+  minePit: u('photo-1547234935-80c7145ec969'),
+  machinery: u('photo-1574607383476-f517f260d30b'),
+  plant: u('photo-1581093458791-9f3c3900df4b'),
+  mountains: u('photo-1464822759023-fed622ff2c3b'),
+  landscape: u('photo-1469474968028-56623f02e42e'),
+  field: u('photo-1500382017468-9049fed747ef'),
+  aerial: u('photo-1470770841072-f978cf4d019e'),
+};
+
+export const PARTNERS = [
+  'Australian Indian Resources',
+  'Sun Mining Corporation',
+  'Deccan Gold Mines',
+  'Thriveni Earthmovers',
+  'NI 43-101 Compliant',
+  'JORC Reporting',
+];
+
 export type NavChild = { label: string; href: string };
 export type NavItem = { label: string; href: string; children?: NavChild[] };
 

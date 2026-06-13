@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import ComingSoon from '@/components/ComingSoon';
 import PageHero from '@/components/PageHero';
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 export default function DevelopmentOperationsPage() {
   return (
     <>
-      <PageHero eyebrow="Jonnagiri Project" title="Development & Operations" />
+      <PageHero image={STOCK.machinery} eyebrow="Jonnagiri Project" title="Development & Operations" />
       <ComingSoon />
     </>
   );

@@ -5,7 +5,7 @@ import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
 import { IconFileText, IconShield, IconUsers } from '@/components/icons';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -32,7 +32,7 @@ const aboutImages = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.landscape}
         eyebrow="Since 1994"
         title="About Geomysore"
         lead="A company focused on exploration and development of precious and base metal resources of India."
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="grid grid-cols-2 gap-4">
               {aboutImages.map((image) => (
-                <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-lg border shadow-sm">
+                <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl border shadow-md">
                   <Image
                     src={image.src}
                     alt={image.alt}

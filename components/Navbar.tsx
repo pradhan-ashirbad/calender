@@ -53,6 +53,29 @@ export default function Navbar() {
       }`}
     >
       <div
+        className={`hidden border-b border-white/10 transition-all duration-300 lg:block ${
+          scrolled ? 'max-h-0 overflow-hidden opacity-0' : 'max-h-12 opacity-100'
+        }`}
+      >
+        <div className="container-x flex h-9 items-center justify-between text-xs text-stone-300/80">
+          <span className="font-mono tracking-wide">
+            Koramangala, Bengaluru · Jonnagiri, Andhra Pradesh
+          </span>
+          <div className="flex items-center gap-5">
+            <a href={`mailto:${SITE.email}`} className="transition-colors hover:text-gold-soft">
+              {SITE.email}
+            </a>
+            <Link
+              href="/careers"
+              className="inline-flex items-center gap-1.5 rounded-full bg-gold/15 px-3 py-0.5 font-medium text-gold-soft transition-colors hover:bg-gold/25"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-gold-soft" aria-hidden="true" />
+              We&rsquo;re hiring
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div
         className={`container-x flex items-center justify-between transition-all duration-300 ${
           scrolled ? 'h-16' : 'h-16 lg:h-20'
         }`}

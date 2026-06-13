@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
@@ -41,7 +42,7 @@ const team = [
 export default function TeamPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.landscape}
         eyebrow="Our People"
         title="Site Team"
         lead="Day-to-day leadership across geology, operations and corporate functions at the Jonnagiri Gold Project."
@@ -51,7 +52,7 @@ export default function TeamPage() {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((person) => (
               <Reveal key={person.name}>
-                <article className="h-full rounded-lg border bg-white p-6 shadow-sm">
+                <article className="h-full rounded-2xl border bg-white p-6 shadow-md">
                   <span
                     className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-sidebar font-display text-lg text-white"
                     aria-hidden="true"
@@ -66,7 +67,7 @@ export default function TeamPage() {
             ))}
           </div>
           <Reveal className="mt-10">
-            <p className="rounded-lg border border-dashed bg-white p-6 text-sm text-muted">
+            <p className="rounded-2xl border border-dashed bg-white p-6 text-sm text-muted">
               Full team profiles are coming soon. In the meantime, learn more about the{' '}
               <Link href="/about/board" className="font-medium text-accent hover:text-accent-dark">
                 Board of Directors

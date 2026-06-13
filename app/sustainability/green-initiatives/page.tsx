@@ -6,7 +6,7 @@ import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
 import { IconArrowRight, IconDroplet, IconLeaf, IconSun } from '@/components/icons';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Green Initiatives',
@@ -44,7 +44,7 @@ const initiatives = [
 export default function GreenInitiativesPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.field}
         eyebrow="Sustainability"
         title="Green Initiatives"
         lead="Practical environmental programmes woven into day-to-day operations at Jonnagiri."
@@ -72,7 +72,7 @@ export default function GreenInitiativesPage() {
       <section className="border-t bg-white py-16 sm:py-20">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg border shadow-sm">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border shadow-md">
               <Image
                 src={IMG.treeStep3}
                 alt="A translocated tree stabilised in its new location"

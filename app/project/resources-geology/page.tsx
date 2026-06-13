@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import ContentCard from '@/components/ContentCard';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
@@ -38,7 +39,7 @@ const blocks = [
 export default function ResourcesGeologyPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.minePit}
         eyebrow="Jonnagiri Project"
         title="Resources & Geology"
         lead="Four mineralised blocks, one proven gold system — detailed exploration in the East and West Blocks underpins the current resource, with significant upside remaining."

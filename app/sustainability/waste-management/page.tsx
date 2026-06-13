@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
@@ -39,7 +40,7 @@ const streams = [
 export default function WasteManagementPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.minePit}
         eyebrow="Sustainability"
         title="Waste Management"
         lead="At Jonnagiri, 'waste' is a resource waiting for its second use. Every major waste stream has a productive destination."
@@ -55,7 +56,7 @@ export default function WasteManagementPage() {
           <div className="mt-10 space-y-5">
             {streams.map((stream) => (
               <Reveal key={stream.name}>
-                <article className="grid gap-4 rounded-lg border bg-white p-6 shadow-sm sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-6">
+                <article className="grid gap-4 rounded-2xl border bg-white p-6 shadow-md sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-6">
                   <h2 className="font-display text-xl text-ink">{stream.name}</h2>
                   <span className="font-mono text-xs uppercase tracking-[0.25em] text-accent" aria-hidden="true">
                     →

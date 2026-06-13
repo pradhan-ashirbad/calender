@@ -7,7 +7,7 @@ import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
 import { StatStrip } from '@/components/Stat';
 import { IconArrowRight } from '@/components/icons';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Jonnagiri Project',
@@ -71,7 +71,7 @@ const upcoming = [
 export default function ProjectPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.minePit}
         eyebrow="Kurnool District, Andhra Pradesh"
         title="The Jonnagiri Gold Project"
         lead="One of the most development-ready gold projects in India, offering strong cash flows over 8–10 years. Open-pit mining combined with straightforward metallurgy makes the project highly profitable — and pilot scale production has commenced."
@@ -90,7 +90,7 @@ export default function ProjectPage() {
       <section className="py-16 sm:py-20">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg border shadow-sm">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border shadow-md">
               <Image
                 src={IMG.banner2}
                 alt="Open-pit mine development at the Jonnagiri Gold Project"
@@ -133,7 +133,7 @@ export default function ProjectPage() {
             ))}
           </div>
           <Reveal className="mt-10">
-            <div className="rounded-lg border border-dashed bg-canvas p-6">
+            <div className="rounded-2xl border border-dashed bg-canvas p-6">
               <p className="text-sm font-medium text-ink">More from the project — in development:</p>
               <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
                 {upcoming.map((page) => (

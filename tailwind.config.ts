@@ -29,6 +29,24 @@ const config: Config = {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-jetbrains)', 'ui-monospace', 'monospace'],
       },
+      boxShadow: {
+        soft: '0 1px 2px rgba(31,5,6,0.04), 0 10px 30px -20px rgba(31,5,6,0.18)',
+        lift: '0 1px 2px rgba(31,5,6,0.04), 0 24px 48px -24px rgba(122,17,21,0.28)',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 32s linear infinite',
+        float: 'float 6s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

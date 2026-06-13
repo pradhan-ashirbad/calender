@@ -3,7 +3,7 @@ import Image from 'next/image';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Sustainability Framework',
@@ -60,7 +60,7 @@ const treeSteps = [
 export default function SustainabilityOverviewPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.field}
         eyebrow="Sustainability"
         title="Our Sustainable Framework"
         lead="At Geomysore, sustainability is at the core of our mining operations. We are committed to minimising environmental impact while enhancing resource efficiency and community value. Our sustainable framework follows a four-step approach."
@@ -73,7 +73,7 @@ export default function SustainabilityOverviewPage() {
             {steps.map((step, index) => (
               <li key={step.title} className="h-full">
                 <Reveal className="h-full">
-                  <article className="h-full rounded-lg border bg-white p-6 shadow-sm">
+                  <article className="h-full rounded-2xl border bg-white p-6 shadow-md">
                     <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent font-mono text-sm font-medium text-white">
                       {index + 1}
                     </span>
@@ -98,7 +98,7 @@ export default function SustainabilityOverviewPage() {
             {treeSteps.map((step, index) => (
               <li key={step.image}>
                 <Reveal className="h-full">
-                  <article className="h-full overflow-hidden rounded-lg border bg-canvas shadow-sm">
+                  <article className="h-full overflow-hidden rounded-2xl border bg-canvas shadow-md">
                     <div className="relative aspect-[4/3]">
                       <Image
                         src={step.image}

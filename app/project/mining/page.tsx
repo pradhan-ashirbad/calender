@@ -3,7 +3,7 @@ import Image from 'next/image';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import { StatGrid } from '@/components/Stat';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Mining',
@@ -29,7 +29,7 @@ const points = [
 export default function MiningPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.machinery}
         eyebrow="Jonnagiri Project"
         title="Mining"
         lead="Modern open-pit operations using conventional drilling and blasting, designed for safe and efficient extraction."
@@ -54,7 +54,7 @@ export default function MiningPage() {
             </ul>
           </Reveal>
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg border shadow-sm">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border shadow-md">
               <Image
                 src={IMG.banner3}
                 alt="Open-pit bench mining at the Jonnagiri Gold Project"

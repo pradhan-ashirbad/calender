@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import ContentCard from '@/components/ContentCard';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
@@ -40,7 +41,7 @@ const shareholders = [
 export default function ShareholdersPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.aerial}
         eyebrow="Ownership & Partners"
         title="Share Holders"
         lead="International backing, Indian execution — committed long-term shareholders with experienced operating partners across the mining value chain."
@@ -57,7 +58,7 @@ export default function ShareholdersPage() {
             ))}
           </div>
           <Reveal className="mt-10">
-            <p className="rounded-lg border border-dashed bg-white p-6 text-sm text-muted">
+            <p className="rounded-2xl border border-dashed bg-white p-6 text-sm text-muted">
               Detailed shareholding information is coming soon. Check back for updates.
             </p>
           </Reveal>

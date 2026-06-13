@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 
@@ -48,7 +49,7 @@ const milestones = [
 export default function BackgroundHistoryPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.mountains}
         eyebrow="Jonnagiri Project"
         title="Background History"
         lead="Three decades of patient, science-led exploration culminating in one of India's most significant gold developments."

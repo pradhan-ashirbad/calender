@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GalleryGrid from '@/components/GalleryGrid';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Gallery',
@@ -34,7 +34,7 @@ const items = [
 export default function GalleryPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.minePit}
         eyebrow="In Pictures"
         title="Gallery"
         lead="Operations, sustainability programmes and community work at the Jonnagiri Gold Project."

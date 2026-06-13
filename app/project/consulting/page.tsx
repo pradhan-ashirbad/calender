@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import ComingSoon from '@/components/ComingSoon';
 import PageHero from '@/components/PageHero';
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 export default function ConsultingPage() {
   return (
     <>
-      <PageHero eyebrow="Jonnagiri Project" title="Consulting" />
+      <PageHero image={STOCK.field} eyebrow="Jonnagiri Project" title="Consulting" />
       <ComingSoon />
     </>
   );

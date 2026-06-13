@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import PageHero from '@/components/PageHero';
 import ResumeForm from '@/components/ResumeForm';
 import Reveal from '@/components/Reveal';
@@ -63,7 +64,7 @@ const jobs: Job[] = [
 export default function CareersPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.machinery}
         eyebrow="We Are Hiring"
         title="Join Geomysore"
         lead="We are actively hiring for our Jonnagiri Gold Project. If you are passionate about mining, processing, and building India's first greenfield integrated gold project, we'd love to hear from you."

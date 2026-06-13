@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
-import { IMG } from '@/lib/site';
+import { IMG, STOCK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Processing',
@@ -28,7 +28,7 @@ const points = [
 export default function ProcessingPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.plant}
         eyebrow="Jonnagiri Project"
         title="Processing"
         lead="From ore to gold, on one site — India's first integrated private-sector gold processing facility in 70 years."
@@ -37,7 +37,7 @@ export default function ProcessingPage() {
       <section className="py-16 sm:py-20">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg border shadow-sm">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border shadow-md">
               <Image
                 src={IMG.banner4}
                 alt="The integrated gold processing plant at Jonnagiri"

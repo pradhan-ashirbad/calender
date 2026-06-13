@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { STOCK } from '@/lib/site';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
@@ -31,7 +32,7 @@ const stats = [
 export default function ExecutiveSummaryPage() {
   return (
     <>
-      <PageHero
+      <PageHero image={STOCK.minePit}
         eyebrow="Jonnagiri Project"
         title="Executive Summary"
         lead="A well developed, construction-ready gold project offering strong cash flows over the next 8–10 years."
