@@ -2,8 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Contours from '@/components/Contours';
 import FeatureRow from '@/components/FeatureRow';
+import HeroParticles from '@/components/HeroParticles';
 import Marquee from '@/components/Marquee';
 import Reveal from '@/components/Reveal';
+import ScrollJourney from '@/components/ScrollJourney';
 import SectionHeading from '@/components/SectionHeading';
 import StatCounter from '@/components/StatCounter';
 import {
@@ -84,6 +86,41 @@ const sustainabilityCards = [
   },
 ];
 
+const journeySteps = [
+  {
+    n: '01',
+    title: 'Explore',
+    text: 'Three decades and 35,000+ sq.km surveyed across India’s most prospective greenstone and schist belts.',
+    image: STOCK.mountains,
+    stats: [{ v: '35,000+', u: 'sq.km', l: 'Explored' }],
+  },
+  {
+    n: '02',
+    title: 'Mine',
+    text: 'Modern open-pit operations advance systematically across the East Block at Jonnagiri.',
+    image: STOCK.minePit,
+    stats: [{ v: '0.4', u: 'MTPA', l: 'Mining capacity' }],
+  },
+  {
+    n: '03',
+    title: 'Process',
+    text: 'An integrated 0.3 MTPA plant turns ore into refined gold on site — proven first at pilot scale.',
+    image: STOCK.plant,
+    stats: [{ v: '0.3', u: 'MTPA', l: 'Processing' }],
+  },
+  {
+    n: '04',
+    title: 'Restore',
+    text: 'Waste becomes building material and the land is rebuilt as we mine — Jonnagiri is the headline.',
+    image: STOCK.landscape,
+    stats: [
+      { v: '361,000', u: 'oz', l: 'JORC Resource' },
+      { v: '8–9', u: 'yrs', l: 'Mine life' },
+    ],
+    cta: { href: '/project', label: 'Explore the Project' },
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -100,6 +137,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-accent/40" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/25" aria-hidden="true" />
+        <HeroParticles />
         <Contours className="absolute inset-0 h-full w-full text-gold/10" />
         <div className="container-x relative pb-24 pt-36">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold-soft/30 bg-white/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-gold-soft backdrop-blur-sm">
@@ -245,52 +283,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Flagship project — full-bleed band */}
-      <section className="relative isolate overflow-hidden bg-ink" aria-labelledby="flagship">
-        <Image
-          src={STOCK.minePit}
-          alt=""
-          fill
-          sizes="100vw"
-          className="animate-kenburns object-cover opacity-40"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/50" aria-hidden="true" />
-        <Contours className="absolute inset-0 h-full w-full text-gold/10" />
-        <div className="container-x relative py-24 lg:py-32">
-          <div className="max-w-2xl">
-            <p className="eyebrow text-gold-soft">Flagship project · Kurnool, Andhra Pradesh</p>
-            <h2 id="flagship" className="mt-4 font-display text-3xl leading-[1.1] text-white sm:text-5xl">
-              The Jonnagiri Gold Project
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-stone-200/90">
-              One of the most development-ready gold projects in India — an open-pit operation with straightforward
-              metallurgy and strong cash flows over 8–10 years. Pilot-scale production has commenced.
-            </p>
-            <div className="mt-10 grid max-w-lg grid-cols-3 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10">
-              {[
-                { v: '361,000', u: 'oz', l: 'JORC Resource' },
-                { v: '6.8', u: 't', l: 'Mineable gold' },
-                { v: '8–9', u: 'yrs', l: 'Mine life' },
-              ].map((s) => (
-                <div key={s.l} className="bg-ink/60 px-4 py-5 text-center backdrop-blur-sm">
-                  <p className="font-mono text-2xl font-medium text-gold-soft">
-                    {s.v}
-                    <span className="ml-0.5 text-sm">{s.u}</span>
-                  </p>
-                  <p className="mt-1 text-[0.7rem] uppercase tracking-wider text-stone-400">{s.l}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-10">
-              <Link href="/project" className="btn-gold">
-                Explore the Project
-                <IconArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* From rock to gold — scroll-pinned journey */}
+      <ScrollJourney steps={journeySteps} intro="From rock to gold" />
 
       {/* Sustainability image cards */}
       <section className="py-20 sm:py-28" aria-labelledby="sustainability">
